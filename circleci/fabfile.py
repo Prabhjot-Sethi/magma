@@ -276,7 +276,7 @@ def _run_remote_cwf_integ_test(repo: str, magma_root: str):
 
 
 def _transfer_all_artifacts():
-    services = "sessiond session_proxy pcrf ocs pipelined ingress"
+    services = "sessiond session_proxy directoryd pcrf ocs pipelined ingress"
     run(f'fab transfer_artifacts:services="{services}",'
         'get_core_dump=True')
     # Copy log files out from the node
